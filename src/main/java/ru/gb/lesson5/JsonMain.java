@@ -12,10 +12,10 @@ public class JsonMain {
     ListResponse response = new ListResponse();
 
     User user1 = new User();
-    user1.setLogin("anonymous");
+    user1.setLogin("user1");
 
     User user2 = new User();
-    user2.setLogin("nagibator");
+    user2.setLogin("user2");
 
     response.setUsers(List.of(user1, user2));
 

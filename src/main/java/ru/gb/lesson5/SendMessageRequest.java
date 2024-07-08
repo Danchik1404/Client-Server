@@ -1,5 +1,8 @@
 package ru.gb.lesson5;
 
+
+import lombok.Getter;
+
 /**
  * {
  *   "type": "sendMessage",
@@ -7,7 +10,8 @@ package ru.gb.lesson5;
  *   "message": "text to nagibator"
  * }
  */
-public class SendMessageRequest extends AbstractRequest {
+@Getter
+public class SendMessageRequest extends ListRequest {
 
   public static final String TYPE = "sendMessage";
 
@@ -18,16 +22,8 @@ public class SendMessageRequest extends AbstractRequest {
     setType(TYPE);
   }
 
-  public String getRecipient() {
-    return recipient;
-  }
-
   public void setRecipient(String recipient) {
     this.recipient = recipient;
-  }
-
-  public String getMessage() {
-    return message;
   }
 
   public void setMessage(String message) {
